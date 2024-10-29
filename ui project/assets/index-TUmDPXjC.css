@@ -4478,3 +4478,50 @@ ARISING FROM,
     z-index: 2;
     position: relative
 }
+/* Additional styles for AI Assistant Interface */
+#root {
+    display: flex;
+    height: 100vh;
+    color: var(--text-editor-active);
+}
+
+#chat-interface {
+    flex: 1;
+    padding: 20px;
+    background-color: var(--bg-dark);
+    overflow-y: auto;
+}
+
+#workspace {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-workspace);
+}
+
+#code-editor, #terminal, #planner, #jupyter, #browser {
+    flex: 1;
+    margin: 10px;
+    background-color: var(--bg-editor-active);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+}
+
+#configuration-panel {
+    width: 250px;
+    padding: 20px;
+    background-color: var(--bg-editor-sidebar);
+    border-left: 1px solid var(--border-editor-sidebar);
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+    #root {
+        flex-direction: column;
+    }
+    #configuration-panel {
+        width: 100%;
+        border-left: none;
+        border-top: 1px solid var(--border-editor-sidebar);
+    }
+}
